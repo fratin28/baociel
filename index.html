@@ -11,9 +11,26 @@
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap');
       body {
         font-family: 'Roboto', sans-serif;
+        /* Background is handled by NetworkBackground component now, but we keep a fallback color */
+        background-color: #0f111a; 
       }
       h1, h2, h3, .font-mono {
         font-family: 'Source Code Pro', monospace;
+      }
+      /* Animation d'apparition en cascade */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0; /* Start hidden */
       }
     </style>
 
@@ -28,9 +45,9 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-CjIncTlu.js"></script>
+  <script type="module" crossorigin src="/baociel/assets/index-ByVi0ksa.js"></script>
 </head>
-  <body class="bg-[#1a1c2c] text-[#e0e0e0]">
+  <body class="text-[#e0e0e0] min-h-screen">
     <div id="root"></div>
   </body>
 </html>
